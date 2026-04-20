@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Sound Puppet Comics</title>
+<link rel="stylesheet" href="spc.css">
+
+<style>
+/* LOGIN FORM */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px 50px;
+}
+
+.login-form {
+    background: #111;
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #222;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form h2 {
+    color: var(--orange);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--orange);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: white;
+    color: black;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+.signup-link a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="assets/logo.png" alt="SPC Logo"></a>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="series.html">Series</a>
+        <a href="characters.html">Characters</a>
+        <a href="audiobooks.html">Audiobooks</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<!-- LOGIN FORM -->
+<div class="login-container">
+    <form class="login-form">
+        <h2>Enter the Universe</h2>
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+
+        <div class="signup-link">
+            Don't have an account? <a href="#">Sign up</a>
+        </div>
+    </form>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>©️ 2026 Sound Puppet Comics</p>
+</footer>
+
+</body>
+</html>

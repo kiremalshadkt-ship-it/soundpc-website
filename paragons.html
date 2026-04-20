@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Paragons | Sound Puppet Comics</title>
+<link rel="stylesheet" href="spc.css">
+
+<style>
+
+/* HERO */
+.hero {
+    height: 75vh;
+    background: url('assets/hero6.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+}
+
+.hero-content {
+    background: rgba(0,0,0,0.75);
+    padding: 25px;
+    max-width: 600px;
+    border-left: 5px solid var(--orange);
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: var(--orange);
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* SECTION */
+section {
+    padding: 50px;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    border-left: 6px solid var(--orange);
+    padding-left: 10px;
+}
+
+/* EPISODES GRID */
+.episodes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* EPISODE CARD */
+.episode {
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #222;
+    transition: 0.3s;
+}
+
+.episode:hover {
+    transform: scale(1.03);
+    border-color: var(--orange);
+}
+
+/* IMAGE */
+.episode img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.episode-content {
+    padding: 15px;
+}
+
+.episode-content h3 {
+    color: var(--orange);
+    margin-bottom: 8px;
+}
+
+.episode-content p {
+    color: #bbb;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="assets/logo.png" alt="SPC Logo"></a>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="series.html">Series</a>
+        <a href="characters.html">Characters</a>
+        <a href="audiobooks.html">Audiobooks</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>The Paragons</h1>
+        <p>
+            A cosmic saga following the rise of Comet Son, a being born from an electric star,
+            as he uncovers the truth about the Order of the Abyss and joins forces with the Sentinels.
+        </p>
+    </div>
+</div>
+
+<!-- EPISODES -->
+<section>
+    <div class="section-title">Season 1 Episodes</div>
+
+    <div class="episodes">
+
+        <div class="episode">
+            <img src="assets/hero6.jpg">
+            <div class="episode-content">
+                <h3>Episode 1: Blood Eclipse</h3>
+                <p>The origin begins on the electric star Phrox during a deadly cosmic war.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="assets/hero2.jpg">
+            <div class="episode-content">
+                <h3>Episode 2: Journey to Tarmat</h3>
+                <p>Survivors attempt escape as Comet Son is sent toward his destiny.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="assets/hero3.jpg">
+            <div class="episode-content">
+                <h3>Episode 3: The Order of the Abyss</h3>
+                <p>Raised by villains, Comet Son believes they are heroes.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="assets/hero4.jpg">
+            <div class="episode-content">
+                <h3>Episode 4: First Mission</h3>
+                <p>His first mission sparks doubt about the Order’s true nature.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="assets/hero1.jpg">
+            <div class="episode-content">
+                <h3>Episode 5: Turning Against the Order</h3>
+                <p>Comet Son rebels and faces Ghostshade in battle.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="assets/hero2.jpg">
+            <div class="episode-content">
+                <h3>Episode 6: Sentinel Mountain</h3>
+                <p>A flashback reveals the Sentinels and deeper truths.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="assets/hero3.jpg">
+            <div class="episode-content">
+                <h3>Episode 7: Battle of Trust</h3>
+                <p>Comet Son and Verdant unite against the Order.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="assets/hero4.jpg">
+            <div class="episode-content">
+                <h3>Episode 8: The Assassination Plan</h3>
+                <p>The Order’s plan is revealed, setting up a global conflict.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>©️ 2026 Sound Puppet Comics</p>
+</footer>
+
+</body>
+</html>

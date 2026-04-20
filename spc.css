@@ -1,0 +1,73 @@
+/* ===== SHARED STYLES FOR ALL PAGES ===== */
+
+:root {
+    --orange: #f04a23;
+    --black: #0a0a0a;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+}
+
+/* ===== HEADER / NAVBAR ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: black;
+    border-bottom: 3px solid var(--orange);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: -5px;
+    background: var(--orange);
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    border-top: 3px solid var(--orange);
+    margin-top: 40px;
+}
