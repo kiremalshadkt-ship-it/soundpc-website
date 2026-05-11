@@ -1,0 +1,234 @@
+/* ===== SHARED STYLES FOR ALL PAGES ===== */
+
+:root {
+    --orange: #f04a23;
+    --black: #0a0a0a;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: black;
+    border-bottom: 3px solid var(--orange);
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav a, nav span {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    font-size: 14px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: -5px;
+    background: var(--orange);
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+nav span {
+    margin-left: 25px;
+    font-size: 13px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: black;
+    border-top: 3px solid var(--orange);
+    margin-top: auto;
+    color: #999;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* ===== BUTTONS ===== */
+button, .btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ===== LINKS ===== */
+a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        margin: 0;
+        justify-content: center;
+    }
+
+    nav a, nav span {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .hero {
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-inner {
+        padding: 30px 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .login-form, .signup-form {
+        width: 90% !important;
+        max-width: 400px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    nav {
+        gap: 3px;
+    }
+
+    nav a, nav span {
+        margin-left: 8px;
+        font-size: 11px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .series {
+        justify-content: center;
+    }
+}
