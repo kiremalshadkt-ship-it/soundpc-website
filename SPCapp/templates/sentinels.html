@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sentinels | Sound Puppet Comics{% endblock %}
+
+{% block extra_css %}
+<style>
+/* HERO */
+.hero {
+    height: 75vh;
+    background: url('{% static "assets/hero4.jpg" %}') center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+}
+
+.hero-content {
+    background: rgba(0,0,0,0.75);
+    padding: 25px;
+    max-width: 600px;
+    border-left: 5px solid var(--orange);
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: var(--orange);
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* SECTION */
+section {
+    padding: 50px;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    border-left: 6px solid var(--orange);
+    padding-left: 10px;
+}
+
+/* EPISODES GRID */
+.episodes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* EPISODE CARD */
+.episode {
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #222;
+    transition: 0.3s;
+}
+
+.episode:hover {
+    transform: scale(1.03);
+    border-color: var(--orange);
+}
+
+/* IMAGE */
+.episode img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.episode-content {
+    padding: 15px;
+}
+
+.episode-content h3 {
+    color: var(--orange);
+    margin-bottom: 8px;
+}
+
+.episode-content p {
+    color: #bbb;
+    font-size: 14px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>Sentinels</h1>
+        <p>
+            Elite protectors against cosmic threats, the Sentinels stand as guardians of existence,
+            defending the universe from forces that seek to unravel reality itself.
+        </p>
+    </div>
+</div>
+
+<!-- EPISODES -->
+<section>
+    <div class="section-title">Season 1 Episodes</div>
+
+    <div class="episodes">
+
+        <div class="episode">
+            <img src="{% static 'assets/hero4.jpg' %}">
+            <div class="episode-content">
+                <h3>Episode 1: The Oath</h3>
+                <p>The formation of the Sentinels and their sacred duty to protect.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="{% static 'assets/hero3.jpg' %}">
+            <div class="episode-content">
+                <h3>Episode 2: First Encounter</h3>
+                <p>A mysterious threat emerges, testing the Sentinels' resolve.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="{% static 'assets/hero2.jpg' %}">
+            <div class="episode-content">
+                <h3>Episode 3: Shadows of the Abyss</h3>
+                <p>Dark forces from beyond begin to infiltrate known realms.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="{% static 'assets/hero1.jpg' %}">
+            <div class="episode-content">
+                <h3>Episode 4: Alliance Forged</h3>
+                <p>The Sentinels seek unlikely allies in their fight.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="{% static 'assets/hero5.jpg' %}">
+            <div class="episode-content">
+                <h3>Episode 5: The Mountain Stronghold</h3>
+                <p>A journey to the ancient Sentinel Mountain reveals secrets.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="{% static 'assets/hero4.jpg' %}">
+            <div class="episode-content">
+                <h3>Episode 6: Betrayal Within</h3>
+                <p>Trust is shattered as a traitor is uncovered.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="{% static 'assets/hero3.jpg' %}">
+            <div class="episode-content">
+                <h3>Episode 7: Cosmic Battle</h3>
+                <p>An epic confrontation with interdimensional invaders.</p>
+            </div>
+        </div>
+
+        <div class="episode">
+            <img src="{% static 'assets/hero2.jpg' %}">
+            <div class="episode-content">
+                <h3>Episode 8: Dawn of Hope</h3>
+                <p>The Sentinels emerge victorious, but the war continues.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

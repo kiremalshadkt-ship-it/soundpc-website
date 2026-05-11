@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Series | Sound Puppet Comics{% endblock %}
+
+{% block extra_css %}
+<style>
+/* TITLE */
+.page-title {
+    padding: 40px 50px 10px;
+    font-size: 40px;
+}
+
+.page-title span {
+    color: var(--orange);
+}
+
+/* GRID */
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(420px, 1fr));
+    gap: 22px 34px;
+    padding: 40px 50px;
+    align-items: stretch;
+}
+
+/* CARD */
+.series-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 16px;
+    align-items: center;
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.series-card:hover {
+    transform: scale(1.03);
+}
+
+/* IMAGE */
+.series-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #222;
+}
+
+/* CONTENT */
+.series-content {
+    padding: 0;
+}
+
+.series-content h3 {
+    color: var(--orange);
+    font-size: 36px;
+    margin: 0 0 10px 0;
+}
+
+.series-content p {
+    color: #bbb;
+    font-size: 14px;
+    margin: 8px 0 0 0;
+}
+
+/* WATCH BUTTON */
+.watch-btn {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.watch-btn:hover {
+    background: white;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        padding: 24px 20px 10px;
+        font-size: 32px;
+    }
+
+    .series-grid {
+        grid-template-columns: 1fr;
+        padding: 24px 20px;
+        gap: 16px;
+    }
+
+    .series-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .series-card img {
+        height: 260px;
+    }
+
+    .series-content h3 {
+        font-size: 30px;
+    }
+
+    .series-card:hover {
+        transform: scale(1.02);
+    }
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- TITLE -->
+<div class="page-title">
+    Explore <span>Series</span>
+</div>
+
+<!-- GRID -->
+<div class="series-grid">
+    <!-- PARAGONS -->
+    <a href="{% url 'paragons' %}" class="series-card">
+        <img src="{% static 'assets/hero6.jpg' %}" alt="The Paragons">
+        <div class="series-content">
+            <h3>The Paragons</h3>
+            <span class="watch-btn">Watch Now</span>
+            <p>God-tier beings shaping reality itself.</p>
+        </div>
+    </a>
+
+    <!-- SENTINELS -->
+    <a href="{% url 'sentinels' %}" class="series-card">
+        <img src="{% static 'assets/hero4.jpg' %}" alt="Sentinels">
+        <div class="series-content">
+            <h3>Sentinels</h3>
+            <span class="watch-btn">Watch Now</span>
+            <p>Elite protectors against cosmic threats.</p>
+        </div>
+    </a>
+
+    <!-- COMETSON -->
+    <a href="{% url 'cometson' %}" class="series-card">
+        <img src="{% static 'assets/hero3.jpg' %}" alt="Cometson">
+        <div class="series-content">
+            <h3>Cometson</h3>
+            <span class="watch-btn">Watch Now</span>
+            <p>A rising force with unstoppable power.</p>
+        </div>
+    </a>
+
+    <!-- ORDER OF THE ABYSS -->
+    <a href="{% url 'order_of_the_abyss' %}" class="series-card">
+        <img src="{% static 'assets/hero2.jpg' %}" alt="Order of the Abyss">
+        <div class="series-content">
+            <h3>Order of the Abyss</h3>
+            <span class="watch-btn">Watch Now</span>
+            <p>Dark forces lurking beyond existence.</p>
+        </div>
+    </a>
+
+    <!-- INDEPENDENCE DAY -->
+    <a href="{% url 'independence_day' %}" class="series-card">
+        <img src="{% static 'assets/hero5.jpg' %}" alt="Independence Day">
+        <div class="series-content">
+            <h3>Independence Day</h3>
+            <span class="watch-btn">Watch Now</span>
+            <p>A story of resistance, unity, and survival.</p>
+        </div>
+    </a>
+</div>
+{% endblock %}

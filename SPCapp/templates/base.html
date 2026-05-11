@@ -1,0 +1,43 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sound Puppet Comics{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'spc.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <a href="{% url 'home' %}"><img src="{% static 'assets/logo.png' %}" alt="SPC Logo"></a>
+        </div>
+        <nav>
+            <a href="{% url 'series_list' %}">Series</a>
+            <a href="{% url 'character_list' %}">Characters</a>
+            <a href="{% url 'audiobooks' %}">Audiobooks</a>
+            <a href="{% url 'about' %}">About</a>
+            {% if user.is_authenticated %}
+                <span style="color: var(--orange); margin-left: 25px;">Welcome, {{ user.username }}</span>
+                <a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'signup' %}">Sign Up</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Sound Puppet Comics.</p>
+    </footer>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

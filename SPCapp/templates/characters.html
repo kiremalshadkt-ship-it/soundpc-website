@@ -1,0 +1,299 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Characters | Sound Puppet Comics{% endblock %}
+
+{% block extra_css %}
+<style>
+/* TITLE */
+.page-title {
+    padding: 40px 50px 10px;
+    font-size: 40px;
+}
+
+.page-title span {
+    color: var(--orange);
+}
+
+/* FEATURED CHARACTER */
+.featured-character {
+    display: flex;
+    gap: 40px;
+    padding: 40px 50px;
+    background: #0a0a0a;
+    border-bottom: 3px solid var(--orange);
+    align-items: center;
+}
+
+.featured-character img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--orange);
+}
+
+.character-details {
+    flex: 1;
+}
+
+.character-details h2 {
+    font-size: 32px;
+    color: var(--orange);
+    margin-bottom: 10px;
+}
+
+.character-alias {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.character-details h3 {
+    color: var(--orange);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.character-details p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* SECTION TITLE */
+.section-title {
+    font-size: 28px;
+    color: var(--orange);
+    margin-bottom: 25px;
+    border-left: 6px solid var(--orange);
+    padding: 40px 50px 0 10px;
+}
+
+/* GRID */
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 25px 50px;
+}
+
+/* CARD */
+.character-card {
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #222;
+    transition: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+    border-color: var(--orange);
+}
+
+/* IMAGE */
+.character-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.character-content {
+    padding: 15px;
+}
+
+.character-content h3 {
+    color: var(--orange);
+}
+
+.character-content p {
+    color: #bbb;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        padding: 24px 20px 10px;
+        font-size: 32px;
+    }
+
+    .featured-character {
+        flex-direction: column;
+        padding: 24px 20px;
+        gap: 20px;
+    }
+
+    .featured-character img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .section-title {
+        padding: 28px 20px 0 10px;
+        margin-bottom: 14px;
+    }
+
+    .characters-grid {
+        padding: 20px;
+        gap: 16px;
+    }
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- TITLE -->
+<div class="page-title">
+    Meet the <span>Characters</span>
+</div>
+
+<!-- FEATURED CHARACTER -->
+<div class="featured-character">
+    <img src="{% static 'assets/hero5.jpg' %}" alt="The Paragons">
+    <div class="character-details">
+        <h2>The Paragons</h2>
+        <p class="character-alias">Not necessarily the strongest, but definitely the most powerful and bravest.</p>
+        <h3>Powers & Abilities:</h3>
+        <p>Reality manipulation, cosmic energy channeling, dimensional awareness, god-tier strength, and the ability to reshape the fabric of existence itself.</p>
+        <h3>Background:</h3>
+        <p>They are a group of heroes who are brought together by fate and a shared destiny to protect the universe from threats beyond imagination.</p>
+    </div>
+</div>
+
+<!-- HEROES SECTION -->
+<div class="section-title">Heroes</div>
+<div class="characters-grid">
+
+    <!-- CAPTAIN BLUE -->
+    <a href="#" class="character-card">
+        <img src="{% static 'assets/cb.jpg' %}" alt="Captain Blue">
+        <div class="character-content">
+            <h3>Captain Blue</h3>
+            <p>Heroic leader with unyielding courage and tactical brilliance.</p>
+        </div>
+    </a>
+
+    <!-- VICTOR -->
+    <a href="#" class="character-card">
+        <img src="{% static 'assets/hero8.jpg' %}" alt="Victor">
+        <div class="character-content">
+            <h3>Victor</h3>
+            <p>Mysterious strategist with hidden depths and complex motives.</p>
+        </div>
+    </a>
+
+    <!-- COMETSON -->
+    <a href="{% url 'cometson' %}" class="character-card">
+        <img src="{% static 'assets/hero3.jpg' %}" alt="Cometson">
+        <div class="character-content">
+            <h3>Cometson</h3>
+            <p>Rising force born from the stars with unstoppable cosmic energy.</p>
+        </div>
+    </a>
+
+    <!-- HURRICANE -->
+    <a href="#" class="character-card">
+        <img src="{% static 'assets/h.jpeg' %}" alt="Hurricane">
+        <div class="character-content">
+            <h3>Hurricane</h3>
+            <p>Force of nature wielding wind and storm as weapons.</p>
+        </div>
+    </a>
+
+    <!-- NOVA -->
+    <a href="#" class="character-card">
+        <img src="{% static 'assets/no.jpeg' %}" alt="Nova">
+        <div class="character-content">
+            <h3>Nova</h3>
+            <p>Explosive energy manipulator with radiant power.</p>
+        </div>
+    </a>
+
+    <!-- BEAM -->
+    <a href="#" class="character-card">
+        <img src="{% static 'assets/b.jpeg' %}" alt="Beam">
+        <div class="character-content">
+            <h3>Beam</h3>
+            <p>Master of light and energy projection.</p>
+        </div>
+    </a>
+
+    <!-- BLUE SCORPION -->
+    <a href="#" class="character-card">
+        <img src="{% static 'assets/hero4.jpg' %}" alt="Blue Scorpion">
+        <div class="character-content">
+            <h3>Blue Scorpion</h3>
+            <p>Agile warrior with deadly precision and speed.</p>
+        </div>
+    </a>
+
+</div>
+
+<!-- VILLAINS SECTION -->
+<div class="section-title">Villains</div>
+<div class="characters-grid">
+
+    <!-- BLACK SUN -->
+    <a href="#" class="character-card">
+        <img src="{% static 'assets/hero7.jpg' %}" alt="Black Sun">
+        <div class="character-content">
+            <h3>Black Sun</h3>
+            <p>Dark entity harnessing corrupted solar power for destruction.</p>
+        </div>
+    </a>
+
+    <!-- TEMPUS NOX -->
+    <a href="#" class="character-card">
+        <img src="{% static 'assets/tp.jpg' %}" alt="Tempus Nox">
+        <div class="character-content">
+            <h3>Tempus Nox</h3>
+            <p>Master of darkness and temporal manipulation.</p>
+        </div>
+    </a>
+
+    <!-- KILL GRIM -->
+    <a href="#" class="character-card">
+        <img src="{% static 'assets/kg.jpeg' %}" alt="Kill Grim">
+        <div class="character-content">
+            <h3>Kill Grim</h3>
+            <p>Relentless assassin with lethal combat prowess.</p>
+        </div>
+    </a>
+
+    <!-- RED STAR -->
+    <a href="#" class="character-card">
+        <img src="{% static 'assets/rs.jpeg' %}" alt="Red Star">
+        <div class="character-content">
+            <h3>Red Star</h3>
+            <p>Anarchic force wielding crimson cosmic energy.</p>
+        </div>
+    </a>
+
+    <!-- THE ORDER OF THE ABYSS -->
+    <a href="{% url 'order_of_the_abyss' %}" class="character-card">
+        <img src="{% static 'assets/hero2.jpg' %}" alt="The Order of the Abyss">
+        <div class="character-content">
+            <h3>The Order of the Abyss</h3>
+            <p>League of dark forces manipulating reality from the shadows.</p>
+        </div>
+    </a>
+
+    <!-- THE MAIDEN -->
+    <a href="#" class="character-card">
+        <img src="{% static 'assets/m.jpg' %}" alt="The Maiden">
+        <div class="character-content">
+            <h3>The Maiden</h3>
+            <p>Mysterious entity with enigmatic powers and unknown allegiances.</p>
+        </div>
+    </a>
+
+</div>
+
+{% endblock %}
