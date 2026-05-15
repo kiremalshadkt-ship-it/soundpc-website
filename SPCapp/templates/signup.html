@@ -55,19 +55,10 @@
         box-shadow: 0 0 10px rgba(240, 74, 35, 0.3);
     }
 
-    .form-group ul {
-        list-style: none;
-        margin-top: 10px;
-        padding: 10px;
-        background: #222;
-        border: 1px solid #444;
-        border-radius: 5px;
-    }
-
-    .form-group li {
-        color: #999;
-        font-size: 14px;
-        margin-bottom: 5px;
+    .field-hint {
+        margin-top: 8px;
+        color: #888;
+        font-size: 13px;
     }
 
     .signup-btn {
@@ -170,11 +161,6 @@
                         {% for error in form.password1.errors %}
                             <li>{{ error }}</li>
                         {% endfor %}
-                    </ul>
-                {% endif %}
-                {% if form.password1.help_text %}
-                    <ul class="form-text">
-                        {{ form.password1.help_text|safe }}
                     </ul>
                 {% endif %}
             </div>
