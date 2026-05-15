@@ -7,6 +7,7 @@ from .models import Character, Series
 from .forms import SignUpForm, LoginForm
 # Create your views here.
 
+@login_required
 def home(request):
     series = Series.objects.all()
     return render(request, 'home.html', {'series': series})
@@ -54,6 +55,8 @@ def independence_day(request):
     return render(request, 'independence-day.html')
 
 def signup_view(request):
+    if request.user.is_authenticated:
+        return redirect('home')
     next_url = request.GET.get('next') or request.POST.get('next')
     if not url_has_allowed_host_and_scheme(next_url, allowed_hosts={request.get_host()}):
         next_url = None
@@ -68,6 +71,8 @@ def signup_view(request):
     return render(request, 'signup.html', {'form': form, 'next': next_url})
 
 def login_view(request):
+    if request.user.is_authenticated:
+        return redirect('home')
     next_url = request.GET.get('next') or request.POST.get('next')
     if not url_has_allowed_host_and_scheme(next_url, allowed_hosts={request.get_host()}):
         next_url = None
