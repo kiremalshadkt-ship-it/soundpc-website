@@ -38,7 +38,7 @@
         <p>&copy; 2026 Sound Puppet Comics.</p>
     </footer>
 
-    <!-- MOBILE BOTTOM NAV (like Market Hub) -->
+    <!-- MOBILE BOTTOM NAV MENU -->
     <nav class="mobile-nav" aria-label="Main navigation">
         <a href="{% url 'home' %}" class="mobile-nav-item{% if request.resolver_match.url_name == 'home' %} active{% endif %}">
             <span class="mobile-nav-icon" aria-hidden="true">🏠</span>
@@ -51,6 +51,10 @@
         <a href="{% url 'character_list' %}" class="mobile-nav-item{% if request.resolver_match.url_name == 'character_list' %} active{% endif %}">
             <span class="mobile-nav-icon" aria-hidden="true">🦸</span>
             <span>Heroes</span>
+        </a>
+        <a href="{% url 'about_list' %}" class="mobile-nav-item{% if request.resolver_match.url_name == 'about_list' %} active{% endif %}">
+            <span class="mobile-nav-icon" aria-hidden="true">📖</span>
+            <span>About</span>
         </a>
         {% if user.is_authenticated %}
             <a href="{% url 'audiobooks' %}" class="mobile-nav-item{% if request.resolver_match.url_name == 'audiobooks' %} active{% endif %}">
