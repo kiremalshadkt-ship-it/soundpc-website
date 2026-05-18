@@ -8,7 +8,6 @@
     {% block extra_css %}{% endblock %}
 </head>
 <body>
-    <!-- HEADER -->
     <header>
         <div class="logo">
             <a href="{% url 'home' %}"><img src="{% static 'assets/logo.png' %}" alt="SPC Logo"></a>
@@ -28,17 +27,14 @@
         </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
     <main>
         {% block content %}{% endblock %}
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer">
         <p>&copy; 2026 Sound Puppet Comics.</p>
     </footer>
 
-    <!-- MOBILE BOTTOM NAV MENU -->
     <nav class="mobile-nav" aria-label="Main navigation">
         <a href="{% url 'home' %}" class="mobile-nav-item{% if request.resolver_match.url_name == 'home' %} active{% endif %}">
             <span class="mobile-nav-icon" aria-hidden="true">🏠</span>
@@ -52,7 +48,7 @@
             <span class="mobile-nav-icon" aria-hidden="true">🦸</span>
             <span>Heroes</span>
         </a>
-        <a href="{% url 'about' %}" class="mobile-nav-item{% if request.resolver_match.url_name == 'about' %} active{% endif %}"></a>
+        <a href="{% url 'about' %}" class="mobile-nav-item{% if request.resolver_match.url_name == 'about' %} active{% endif %}">
             <span class="mobile-nav-icon" aria-hidden="true">📖</span>
             <span>About</span>
         </a>

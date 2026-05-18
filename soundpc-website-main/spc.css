@@ -18,7 +18,7 @@ body {
     color: var(--white);
 }
 
-/* ===== HEADER / NAVBAR ===== */
+/* ===== HEADER / NAVBAR (DESKTOP DEFAULT) ===== */
 header {
     display: flex;
     justify-content: space-between;
@@ -36,7 +36,7 @@ header {
     text-decoration: none;
 }
 
-nav a {
+nav.desktop-nav a {
     color: white;
     margin-left: 25px;
     text-decoration: none;
@@ -44,7 +44,7 @@ nav a {
     position: relative;
 }
 
-nav a::after {
+nav.desktop-nav a::after {
     content: "";
     position: absolute;
     width: 0%;
@@ -55,12 +55,18 @@ nav a::after {
     transition: 0.3s;
 }
 
-nav a:hover::after {
+nav.desktop-nav a:hover::after {
     width: 100%;
 }
 
-nav a:hover {
+nav.desktop-nav a:hover {
     color: var(--orange);
+}
+
+.nav-welcome {
+    color: white;
+    margin-left: 25px;
+    font-weight: normal;
 }
 
 /* ===== FOOTER ===== */
@@ -70,4 +76,67 @@ footer {
     background: black;
     border-top: 3px solid var(--orange);
     margin-top: 40px;
+}
+
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* 1. Mobile Settings (Screens 768px wide and lower) */
+@media (max-width: 768px) {
+    header {
+        display: none !important; /* Removes the broken top header on mobile view */
+    }
+
+    footer.site-footer {
+        margin-bottom: 70px; /* Makes sure the footer text clears the fixed bottom nav */
+    }
+
+    body {
+        padding-bottom: 60px; /* Protects page contents from overlapping with bottom links */
+    }
+
+    .mobile-nav {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 1000;
+        border-top: 3px solid var(--orange);
+    }
+
+    .mobile-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        color: var(--white);
+        font-size: 11px;
+        flex: 1;
+    }
+
+    .mobile-nav-icon {
+        font-size: 20px;
+        margin-bottom: 2px;
+        display: inline-block;
+        line-height: 1;
+    }
+
+    .mobile-nav-item.active {
+        color: var(--orange);
+        font-weight: bold;
+    }
+}
+
+/* 2. Desktop Settings (Screens 769px wide and higher) */
+@media (min-width: 769px) {
+    .mobile-nav {
+        display: none !important; /* Keeps mobile bottom menu hidden on desktops */
+    }
 }
