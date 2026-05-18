@@ -48,7 +48,7 @@
             <span class="mobile-nav-icon" aria-hidden="true">🦸</span>
             <span>Heroes</span>
         </a>
-        <a href="{% url 'about' %}" class="mobile-nav-item{% if request.resolver_match.url_name == 'about' %} active{% endif %}">
+        <a href="{% url 'about' %}" class="mobile-nav-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
             <span class="mobile-nav-icon" aria-hidden="true">📖</span>
             <span>About</span>
         </a>
