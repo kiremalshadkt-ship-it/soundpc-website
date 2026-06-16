@@ -226,11 +226,11 @@ input[type="range"] {
     <audio controls class="audio-player">
         <source src="https://res.cloudinary.com/dlarmrzdj/video/upload/v1781624746/Chapter_6_ijfhne.mp3" type="audio/mpeg"> </audio>
 </div>
-    <div class="chapter" onclick="playAudio(7)">
-        Chapter 7 - The first break in Sulka
-        <audio controls class="audio-player">
-            <source src="https://res.cloudinary.com/dlarmrzdj/video/upload/v1781625872/CHAPTER_7_hmjipp.mp3" type="audio/mpeg"> </audio>
-    </div> 
+<div class="chapter" onclick="playAudio(7)">
+    Chapter 7 - The first break in Sulka
+    <audio controls class="audio-player">
+        <source src="https://res.cloudinary.com/dlarmrzdj/video/upload/v1781625872/CHAPTER_7_hmjipp.mp3" type="audio/mpeg"> </audio>
+</div>
 
 <audio id="audio"></audio>
 
@@ -242,12 +242,13 @@ const nowPlaying = document.getElementById("nowPlaying");
 /* 🎵 CHAPTER LIST */
 const chapters = [
     { src: "assets/title.mp3", title: "Introduction" },
-    { src: "assets/CHAPTER ONE!!.wav", title: "CHAPTER ONE!!" },
-    { src: "assets/chapter2.mp3", title: "Chapter 2" },
-    { src: "assets/chapter3.mp3", title: "Chapter 3" },
-    { src: "assets/chapter4.mp3", title: "Chapter 4" },
-    { src: "assets/chapter5.mp3", title: "Chapter 5" },
-    { src: "assets/chapter6.mp3", title: "Chapter 6" }
+    { src: "https://res.cloudinary.com/dlarmrzdj/video/upload/v1778197596/CHAPTER_ONE_cghkxk.wav", title: "Chapter 1 - Beneath the golden world" },
+    { src: "https://res.cloudinary.com/dlarmrzdj/video/upload/v1778623481/CHAPTER_TWO_qcs9qm.mp3", title: "Chapter 2 - The sun was made" },
+    { src: "https://res.cloudinary.com/dlarmrzdj/video/upload/v1778622978/CHAPTER_THREE_riobjc.mp4", title: "Chapter 3 - Forbidden teaching" },
+    { src: "https://res.cloudinary.com/dlarmrzdj/video/upload/v1778623597/CHAPTER_FOUR_2_2_mr9odj.mp3", title: "Chapter 4 - Hammer of gods" },
+    { src: "https://res.cloudinary.com/dlarmrzdj/video/upload/v1778624175/CHAPTER_FIVE_vbq5gj.mp4", title: "Chapter 5 - Death of Zelnar" },
+    { src: "https://res.cloudinary.com/dlarmrzdj/video/upload/v1781624746/Chapter_6_ijfhne.mp3", title: "Chapter 6 - Chains of order" },
+    { src: "https://res.cloudinary.com/dlarmrzdj/video/upload/v1781625872/CHAPTER_7_hmjipp.mp3", title: "Chapter 7 - The first break in Sulka" }
 ];
 
 let currentIndex = 0;
