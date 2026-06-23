@@ -1,25 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Paragons: Comet Son #1</title>
-    <!--SPC style sheet -->
-    <link rel="stylesheet" type="text/css" href="spc.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paragons: Comet Son #1 | Sound Puppet Comics</title>
+<link rel="stylesheet" href="spc.css">
+<style>
+/* HERO */
+.hero {
+    height: 60vh;
+    background: url('assets/hero6.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+}
+.hero-content {
+    background: rgba(0,0,0,0.75);
+    padding: 25px;
+    max-width: 700px;
+    border-left: 5px solid var(--orange);
+}
+.hero h1 {
+    font-size: 50px;
+    color: var(--orange);
+}
+.hero p {
+    margin-top: 10px;
+    color: #ccc;
+}
+/* CONTENT */
+section {
+    padding: 50px;
+}
+.section-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    border-left: 6px solid var(--orange);
+    padding-left: 10px;
+}
+/* VIDEO PLAYER */
+.video-container {
+    background: #111;
+    border: 2px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.video-container iframe {
+    width: 100%;
+    height: 650px;
+    border: none;
+}
+/* BUTTONS */
+.issue-links {
+    margin-top: 25px;
+}
+.issue-links a {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.issue-links a:hover {
+    opacity: 0.85;
+}
+/* CREDITS */
+.credits {
+    background: #111;
+    border: 2px solid #222;
+    border-radius: 10px;
+    padding: 25px;
+}
+.credits p {
+    margin: 10px 0;
+    color: #ccc;
+}
+/* MOBILE */
+@media(max-width:768px){
+    .hero {
+        height: 50vh;
+        padding: 25px;
+    }
+    .hero h1 {
+        font-size: 34px;
+    }
+    section {
+        padding: 25px;
+    }
+    .video-container iframe {
+        height: 300px;
+    }
+}
+</style>
 </head>
 <body>
-
-<h1>PARAGONS: COMET SON #1 — THE COMET</h1>
-
-<p>The beginning of a legend.</p>
-
-<video width="100%" controls>
-    <source src="YOUR_CLOUDINARY_VIDEO_URL" type="video/mp4">
-</video>
-
-<h2>Credits</h2>
-
-<p>Creator, Writer & Producer: Schadikat</p>
-<p>Video Editor & Producer: Fahad</p>
-<p>Voice Actor/Narrator: N.W Ahroyo</p>
-
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/logo.png" alt="SPC Logo">
+        </a>
+    </div>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="series.html">Series</a>
+    <a href="characters.html">Characters</a>
+    <a href="audiobooks.html">Audiobooks</a>
+    <a href="about.html">About</a>
+</nav>
+</header>
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>Issue #1: The Comet</h1>
+        <p>
+            A damaged spacecraft falls from the stars and crashes on Tarmat.
+            Within the wreckage lies a child whose arrival will alter the fate
+            of the world forever.
+        </p>
+    </div>
+</div>
+<!-- VIDEO -->
+<section>
+<div class="section-title">
+    Watch Issue #1
+</div>
+<div class="video-container">
+    <iframe
+    src="https://www.youtube.com/embed/3jylSu5wiCI"
+    title="Paragons: Comet Son Issue 1"
+    allowfullscreen>
+    </iframe>
+</div>
+<div class="issue-links">
+    <a href="https://youtu.be/3jylSu5wiCI?si=kVog3skDYV91zuy3" target="_blank">
+        Watch on YouTube
+    </a>
+    <a href="paragons.html">
+        ← Back to Paragons
+    </a>
+</div>
+</section>
+<!-- CREDITS -->
+<section>
+<div class="section-title">
+    Credits
+</div>
+<div class="credits">
+    <p><strong>Creator, Writer & Producer:</strong> Schadikat</p>
+    <p><strong>Video Editor & Producer:</strong> Fahad</p>
+    <p><strong>Voice Actor / Narrator:</strong> N.W Ahroyo</p>
+    <p><strong>Timeline Manager:</strong> Esco</p>
+    <p><strong>Honorable Mention:</strong> Artin</p>
+    <p><strong>Special Thanks:</strong> Edrine</p>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+    <p>©️ 2026 Sound Puppet Comics</p>
+</footer>
 </body>
 </html>
